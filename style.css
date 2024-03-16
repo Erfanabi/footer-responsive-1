@@ -1,0 +1,143 @@
+:root {
+  --primary-color: #1f1d58;
+  --secondry-color: #29277a;
+
+  --first-text: rgb(255 255 255 / 96%);
+  --second-text: rgb(255 255 255 / 50%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+section {
+  position: fixed;
+  left: 0;
+  bottom: 12px;
+  width: 100%;
+  background: var(--secondry-color);
+  padding-top: 60px;
+}
+
+.footer {
+  display: grid;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  border-bottom: 1px solid var(--second-text);
+  margin: 0 30px;
+}
+
+.footer img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+.footer .links {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer .links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  /* margin-bottom: 2rem; */
+}
+
+.footer .links-column h2 {
+  display: block;
+  color: var(--first-text);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.footer .links-column a {
+  display: block;
+  color: var(--second-text);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer .links-column .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.6rem;
+}
+
+.footer .links-column .social i {
+  font-size: 1.7rem;
+  color: var(--second-text);
+}
+
+.bottom {
+  margin: 1.5rem 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--second-text);
+  gap: 0.3rem;
+}
+
+.bottom .legal a {
+  color: var(--second-text);
+  margin: 0 3px;
+}
+
+@media only screen and (min-width: 400px) {
+  .footer img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .footer .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .links-column {
+    align-items: start;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .footer,
+  .bottom {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    padding: 0 30px;
+  }
+
+  .footer .links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
